@@ -45,17 +45,17 @@ spec:
                   name: {{ include "inapp.fullname" . }}
             - name: AUTH_BASE_URL
               valueFrom:
-                configMapKeyRef: 
+                secretKeyRef: 
                   key: authBaseUrl
                   name: {{ include "inapp.fullname" . }}
             - name: CLIENT_ID
               valueFrom:
-                configMapKeyRef: 
+                secretKeyRef: 
                   key: clientId
                   name: {{ include "inapp.fullname" . }}
             - name: CLIENT_SECRET
               valueFrom:
-                configMapKeyRef: 
+                secretKeyRef: 
                   key: clientId
                   name: {{ include "inapp.fullname" . }}
           ports:
