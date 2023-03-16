@@ -56,7 +56,7 @@ spec:
             - name: CLIENT_SECRET
               valueFrom:
                 secretKeyRef: 
-                  key: clientId
+                  key: clientSecret
                   name: {{ include "inapp.fullname" . }}
           ports:
             - name: http
