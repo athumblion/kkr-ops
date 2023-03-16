@@ -39,17 +39,6 @@ securityContext:
   # runAsNonRoot: true
   # runAsUser: 1000
 
-responseTransformer:
-  enabled: false
-  config: {}
-
-httpsRedirect:
-  enabled: false
-
-
-ipRestriction:
-  enabled: false
-
 service:
   type: ClusterIP
   port: 80
@@ -58,10 +47,11 @@ ingress:
   enabled: false
   className: ''
   annotations:
-    kubernetes.io/ingress.class: kong
-    kubernetes.io/tls-acme: "true"
-    cert-manager.io/cluster-issuer: letsencrypt-prod
-    konghq.com/plugins: goerli-alpha-frontend-https-redirect
+    {}
+    # kubernetes.io/ingress.class: kong
+    # kubernetes.io/tls-acme: "true"
+    # cert-manager.io/cluster-issuer: letsencrypt-prod
+    # konghq.com/plugins: goerli-alpha-frontend-https-redirect
   hosts:
     - host: chart-example.local
   tls: []
