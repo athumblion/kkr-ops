@@ -40,7 +40,7 @@ securityContext:
   # runAsUser: 1000
 
 responseTransformer:
-  enabled: true
+  enabled: false
   config: {}
 
 httpsRedirect:
@@ -58,10 +58,10 @@ ingress:
   enabled: false
   className: ''
   annotations:
-    {}
-    # kubernetes.io/ingress.class: kong
-    # kubernetes.io/tls-acme: "true"
-    # cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: kong
+    kubernetes.io/tls-acme: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    konghq.com/plugins: goerli-alpha-frontend-https-redirect
   hosts:
     - host: chart-example.local
   tls: []
