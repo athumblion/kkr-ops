@@ -13,6 +13,8 @@ image:
 config:
   apiBaseUrl: ''
   useVConsole: ''
+
+secret:
   oauth:
     authBaseUrl: ''
     clientId: ''
