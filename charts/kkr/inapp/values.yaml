@@ -39,6 +39,17 @@ securityContext:
   # runAsNonRoot: true
   # runAsUser: 1000
 
+responseTransformer:
+  enabled: true
+  config: {}
+
+httpsRedirect:
+  enabled: false
+
+
+ipRestriction:
+  enabled: false
+
 service:
   type: ClusterIP
   port: 80
